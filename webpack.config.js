@@ -28,6 +28,7 @@ module.exports = {
                 inject: true, // Inyecta el bundle al template HTML
                 template: './public/index.html', // La ruta al template HTML
                 filename: './index.html' // Nombre final del archivo
+                
             }
         ),
         new CopyWebpackPluguin({
@@ -35,6 +36,14 @@ module.exports = {
                 {
                     from: './src/styles/styles.css',
                     to: ''
+                },
+                {
+                    from: './src/scripts/',
+                    to: './src/scripts/'
+                },
+                {
+                    from: './src/assets/img',
+                    to: './src/assets/img'
                 }
             ]
         })

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("miFormulario");e.addEventListener("submit",(function(t){t.preventDefault();var n;n=e.elements.loquequierebuscar.value,console.log("Valor capturado:",n)}))}));

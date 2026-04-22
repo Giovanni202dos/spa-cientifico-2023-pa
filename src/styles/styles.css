@@ -48,6 +48,7 @@ body {
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  background-color: #eee9e8eb;
 }
 
 .Characters-card img {
@@ -77,7 +78,49 @@ body {
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  
 }
+
+/* #Characters-item a{
+  background-color: #15302C;
+} */
+.vivo{
+  background-color: #14f820;
+  
+}
+.muerto{
+  background-color: #e90f0f;
+}
+.desconocido{
+  background-color: #888585;
+}
+
+#Characters-item{
+  /* border: solid 2px goldenrod;*/
+  border-radius: 5% 5% 4% 4%;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0); /* Efecto de sombra */
+  background-color: #f3ecec;
+}
+#Characters-item a img{
+  border-radius: 5%;
+}
+#Characters-item:hover{
+  transform: translateY(-3px);
+  animation: sacudir 0.5s infinite alternate;
+}
+@keyframes sacudir {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-5px); /* Mueve la imagen -5px a la izquierda al 100% de la animación */
+  }
+}
+
+/* #Characters-item:hover img{
+  border: #026C86 solid 2px;
+} */
+
 
 .Characters-item img {
   width: 100%;
@@ -120,3 +163,174 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+#section-cambio-page{
+  display: flex;
+  justify-content: center; 
+  /* background-color: aqua; */
+  margin: 8px;
+}
+
+#conteo-de-paginas{
+  display: contents;
+  
+}
+
+.retroceder-boton{
+  width: 86px;
+  margin-right: 3px;
+}
+.avanzar-boton{
+  width: 86px;
+  margin-left: 3px;
+}
+
+#Main{
+  /*background-image: url('https://images7.alphacoders.com/633/633262.png');*/ /* Ruta de la imagen de fondo */
+  background-image: url('./src/assets/img/white.png');
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center top; /* Alinea la imagen de fondo al centro y arriba */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el relleno predeterminado del body */
+}
+
+#Main a{
+  text-decoration: none;
+}
+
+
+#contenedor-main-1{
+    background-image: url('./src/assets/img/white.png'); 
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center top; /* Alinea la imagen de fondo al centro y arriba */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    height: 35rem;
+    width: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    filter: sepia(60%);
+    border: 2px dashed black; 
+}
+
+#Main-black{
+  /*background-image: url('https://images7.alphacoders.com/633/633262.png');*/ /* Ruta de la imagen de fondo */
+  background-image: url('./src/assets/img/black.png');
+  background-attachment: fixed; /* Fija la imagen de fondo */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center top; /* Alinea la imagen de fondo al centro y arriba */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el relleno predeterminado del body */
+}
+
+#Main-black #contenedor-main-1{
+  background-image: url('./src/assets/img/black.png');
+}
+
+#Main-black #Characters-item{
+  background-color: rgba(15, 15, 15, 0.91);
+  
+}
+#Main-black #Characters-item a{
+  color: white;
+  text-decoration: none;
+}
+
+#Main-black #contenedor-main-1{
+  border: 2px dashed white; 
+}
+#Main-black .inicio-boton{
+  border: white solid 2px;
+}
+#Main-black .Characters-card{
+  background-color: rgba(15, 15, 15, 0.91);
+  color: white;
+}
+
+.inicio-boton{
+  background-color: #060a06;
+  height: 30px;
+  width: 100px;
+  border-radius: 3%;
+}
+
+.inicio-boton:hover{
+  background-color: #14c1d8;
+  height: 35px;
+  width: 105px;
+  border: #060a06 solid 2px;
+}
+.inicio-boton a{
+  text-decoration: none;
+  color: #f3f3f3;
+  display: block;
+  height: 100%;
+  text-align: center;
+
+}
+.inicio-boton:hover a{
+  color: #060a06;
+}
+
+.activar{
+  background-color: #14f820;
+}
+
+.nada-para-mostrar{
+  width:323%; 
+  height:500px;
+  text-align: center;
+  color: #e90f0f;
+  margin-top: 59%;
+  transform: rotate(-45deg);
+  margin-left: 60%;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.footer{
+  border: #3c484e solid 2px;
+  background-color: #b1b3b5;
+  height: 205px;
+}
+
+.nav-botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.intro{
+  background-color: #b1b3b5a8;
+}
+.educacion{
+  background-color: #888a8b;
+}
+.intereses{
+  background-color: #696a6b;
+}
+.contacto{
+  background-color: #3f4041;
+  color: white;
+}
+#section-boton-apariencia{
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 6px;
+}
+
+
+  
