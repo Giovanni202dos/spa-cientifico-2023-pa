@@ -332,5 +332,179 @@ body {
   margin: 6px;
 }
 
+/* Estilo filtros */
+/* .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px;
+  background: #111;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background: #48cfad;
+  color: black;
+}
+
+.filter-buttons .active {
+  background: #48cfad;
+  color: black;
+  border: none;
+}
+
+.filter-group input[type="text"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.filter-group button {
+  background: #48cfad;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+} */
+
+/* CONTENEDOR */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background: #0f1115;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* BUSCADOR */
+.filter-search {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-search input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #1a1d24;
+  color: white;
+}
+
+.filter-search button {
+  background: #48cfad;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.15s ease;
+}
+
+.filter-search button:hover {
+  transform: scale(1.05);
+}
+
+/* GRUPOS */
+.filter-group span {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* CHIPS */
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+/* hover animado */
+.chip:hover {
+  background: #2a2f3a;
+  transform: translateY(-2px);
+}
+
+/* activo */
+.chip.active {
+  background: #48cfad;
+  color: black;
+  border: none;
+  box-shadow: 0 0 10px rgba(72, 207, 173, 0.5);
+}
+
+/* MOBILE PRO */
+@media (max-width: 600px) {
+  .filters {
+    padding: 10px;
+  }
+
+  .filter-search {
+    flex-direction: column;
+  }
+
+  .filter-search button {
+    width: 100%;
+  }
+
+  .chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+  }
+
+  .chips::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .chips::-webkit-scrollbar-thumb {
+    background: #48cfad;
+    border-radius: 10px;
+  }
+}
+/* fin estilo filtros */
+
 
   
