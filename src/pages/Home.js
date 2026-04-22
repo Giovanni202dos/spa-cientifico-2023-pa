@@ -26,7 +26,7 @@ const Home = async () => {
         return view;
     }
 
-    const view = `
+    /* const view = `
     <nav class="nav-botones" >
             <div style="display: inline;">
                 <!-- Agregar un campo de entrada de texto -->
@@ -80,7 +80,67 @@ const Home = async () => {
 
   ${characters && characters.info.pages>1?section():''}
 
-    `;
+    `; */
+    const view = `
+<nav class="filters">
+
+  <div class="filter-group">
+    <input type="text" id="textInput" placeholder="Buscar personaje...">
+    <button onclick="setValorDeUnParametroDelHash('name', textInput.value)">
+      Buscar
+    </button>
+  </div>
+
+  <div class="filter-group">
+    <span>Género</span>
+    <div class="filter-buttons">
+      <button onclick="setValorDeUnParametroDelHash('gender', 'male')" class="${activarColorBoton(hash,'gender','male')?'active':''}">Hombre</button>
+      <button onclick="setValorDeUnParametroDelHash('gender', 'female')" class="${activarColorBoton(hash,'gender','female')?'active':''}">Mujer</button>
+      <button onclick="setValorDeUnParametroDelHash('gender', 'unknown')" class="${activarColorBoton(hash,'gender','unknown')?'active':''}">?</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <span>Estado</span>
+    <div class="filter-buttons">
+      <button onclick="setValorDeUnParametroDelHash('status', 'Alive')" class="${activarColorBoton(hash,'status','Alive')?'active':''}">Vivo</button>
+      <button onclick="setValorDeUnParametroDelHash('status', 'Dead')" class="${activarColorBoton(hash,'status','Dead')?'active':''}">Muerto</button>
+      <button onclick="setValorDeUnParametroDelHash('status', 'unknown')" class="${activarColorBoton(hash,'status','unknown')?'active':''}">?</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <span>Especie</span>
+    <div class="filter-buttons">
+      <button onclick="setValorDeUnParametroDelHash('species', 'Human')" class="${activarColorBoton(hash,'species','Human')?'active':''}">Humano</button>
+      <button onclick="setValorDeUnParametroDelHash('species', 'Alien')" class="${activarColorBoton(hash,'species','Alien')?'active':''}">Alien</button>
+      <button onclick="setValorDeUnParametroDelHash('species', 'Robot')" class="${activarColorBoton(hash,'species','Robot')?'active':''}">Robot</button>
+      <button onclick="setValorDeUnParametroDelHash('species', 'unknown')" class="${activarColorBoton(hash,'species','unknown')?'active':''}">?</button>
+    </div>
+  </div>
+
+</nav>
+
+${characters && characters.info.pages>1?section():''}
+
+<div class="Characters">
+  ${
+    characters
+      ? characters.results.map(character => `
+          <article class="Character-item">
+              <a href="#/character/${character.id}" class="${cambioDeClaseSegunStatus(character.status)}">
+                  <img src="${character.image}" alt="${character.name}">
+                  <h2>${character.name}</h2>
+                  <p>${character.species}</p>
+              </a>
+          </article>
+      `).join('')
+      : '<div class="nada-para-mostrar">No hay personajes disponibles</div>'
+  }
+</div>
+
+${characters && characters.info.pages>1?section():''}
+`;
     return view;
 }
 
