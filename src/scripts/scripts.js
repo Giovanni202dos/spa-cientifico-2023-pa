@@ -167,3 +167,21 @@ function cambioAparaiencia(){
         document.getElementById('boton-apariencia').innerHTML='black'
     }
 }
+
+function limpiarFiltros() {
+    location.hash = '#/character/?page=1';
+}
+
+function obtenerValueDeParametroDelHash(hash,nameParametro){
+    //console.log('entroooooo;: ',hash);
+    let data='';
+    const params = new URLSearchParams(hash.slice(1));
+    //console.log('entroooooo;: ',params);
+    params.forEach((value, key) => {
+        if(key.includes(nameParametro)){
+            data=value;
+            return ;
+        } 
+    });
+    return data;
+}

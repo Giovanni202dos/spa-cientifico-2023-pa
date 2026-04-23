@@ -81,11 +81,12 @@ const Home = async () => {
   ${characters && characters.info.pages>1?section():''}
 
     `; */
+    
 const view = `
     <nav class="filters">
     
       <div class="filter-search">
-        <input type="text" id="textInput" placeholder="Buscar personaje...">
+        <input value="${obtenerValueDeParametroDelHash(hash,'name')}" type="text" id="textInput" placeholder="Buscar personaje...">
         <button onclick="setValorDeUnParametroDelHash('name', textInput.value)">
           Buscar
         </button>
@@ -108,7 +109,7 @@ const view = `
           <button class="chip ${activarColorBoton(hash,'status','unknown')?'active':''}" onclick="setValorDeUnParametroDelHash('status','unknown')">?</button>
         </div>
       </div>
-    
+      
       <div class="filter-group">
         <span>Especie</span>
         <div class="chips">
@@ -118,7 +119,11 @@ const view = `
           <button class="chip ${activarColorBoton(hash,'species','unknown')?'active':''}" onclick="setValorDeUnParametroDelHash('species','unknown')">?</button>
         </div>
       </div>
-    
+                <div class="filter-actions">
+        <button onclick="limpiarFiltros()" class="clear-btn">
+          Limpiar filtros
+        </button>
+      </div>
     </nav>
 
 ${characters && characters.info.pages>1?section():''}

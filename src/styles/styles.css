@@ -443,4 +443,23 @@ body {
 /* fin estilo filtros */
 
 
-  
+  .filter-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+}
