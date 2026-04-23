@@ -352,3 +352,141 @@ body {
     font-size: 14px;
   }
 }
+
+/* ================= CHARACTER PAGE ================= */
+
+.character-page {
+  padding: 20px;
+}
+
+/* CONTENEDOR */
+.character-container {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+}
+
+/* CARD PRINCIPAL */
+.character-main-card {
+  background: #1a1d24;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.character-main-card:hover {
+  transform: translateY(-5px);
+}
+
+.character-main-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.character-main-card h2 {
+  margin: 10px 0;
+}
+
+/* STATUS BADGE */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.status.alive {
+  background: #14f820;
+  color: black;
+}
+
+.status.dead {
+  background: #ff4d4d;
+  color: white;
+}
+
+.status.unknown {
+  background: #888;
+}
+
+/* INFO DERECHA */
+.character-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* BLOQUES */
+.info-block {
+  background: #1a1d24;
+  border-radius: 16px;
+  padding: 20px;
+  color: #e6e9ed;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.info-block h3 {
+  margin-bottom: 10px;
+  color: #48cfad;
+}
+
+/* LISTA EPISODIOS */
+.episode-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  max-height: 200px; /* 🔥 clave */
+  overflow-y: auto;
+}
+
+.episode-list li {
+  margin-bottom: 8px;
+}
+
+.episode-list a {
+  display: block;
+  padding: 8px 10px;
+  background: #0f1115;
+  border-radius: 8px;
+  color: #48cfad;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.episode-list a:hover {
+  background: #48cfad;
+  color: black;
+}
+
+/* SCROLL BONITO */
+.episode-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.episode-list::-webkit-scrollbar-thumb {
+  background: #48cfad;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .character-container {
+    grid-template-columns: 1fr;
+  }
+
+  .character-main-card {
+    max-width: 300px;
+    margin: auto;
+  }
+}
