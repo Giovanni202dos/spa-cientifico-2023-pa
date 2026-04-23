@@ -490,3 +490,103 @@ body {
     margin: auto;
   }
 }
+
+/* ================= ABOUT PRO ================= */
+
+.about {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* GRID PARA LAS SECCIONES */
+.about section {
+  background: linear-gradient(145deg, #1a1d24, #14171c);
+  border-radius: 16px;
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.about section:hover {
+  transform: translateY(-5px);
+}
+
+/* INTRO (perfil) */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.intro img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid #48cfad;
+  box-shadow: 0 0 20px rgba(72, 207, 173, 0.4);
+}
+
+.intro h1 {
+  margin: 0;
+  color: #48cfad;
+  font-size: 22px;
+}
+
+.intro p {
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* TITULOS */
+.about h2 {
+  color: #48cfad;
+  margin-bottom: 10px;
+}
+
+/* LISTAS */
+.about ul {
+  padding-left: 18px;
+}
+
+.about li {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* CONTACTO */
+.contacto {
+  background: linear-gradient(145deg, #101417, #0b0e11);
+}
+
+/* LINKS */
+.contacto a {
+  color: #48cfad;
+  transition: all 0.2s ease;
+}
+
+.contacto a:hover {
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro img {
+    width: 110px;
+    height: 110px;
+  }
+}
