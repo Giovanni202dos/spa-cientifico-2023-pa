@@ -1,30 +1,26 @@
 const Header = () => {
 
-    const view = `
-    
-        <div class="Header-main">
-            <div class="Header-logo">
-                <h1 />
-                    <a href="/">
-                    100tifi.co
-                    </a>  
-                </h1>
-            </div>
+const view = `
+<header class="Header-main">
 
+  <div class="Header-logo">
+    <h1>
+      <a href="/">Rick and Mortycio</a>
+    </h1>
+  </div>
 
-            <div class="Header-nav">
-                <a href="#/about">
-                    About
-                </a>
+  <nav class="Header-nav">
+    <a href="#/about">About</a>
+  </nav>
 
-            </div>
-        </div>
-    <section id="section-boton-apariencia">
+</header>
+
+<section id="section-boton-apariencia">
   <button onclick="cambioAparaiencia()" id="boton-apariencia" class="theme-toggle">
     Dark
   </button>
 </section>
-    `
+`;
     return view;
 };
 
