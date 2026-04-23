@@ -5,8 +5,8 @@ const Inicio = async () => {
       <div class="inicio">
         <div id="contenedor-main-1">
 
-          <div class="inicio-boton">
-            <a href="#/character/?page=1">
+          <div >
+            <a href="#/character/?page=1" class="inicio-boton">
               Entra y conoce los personajes de Rick and Morty
             </a>
           </div>
