@@ -15,12 +15,13 @@ const view = `
 
 </header>
 
-<section id="section-boton-apariencia">
+
+`;
+/*<section id="section-boton-apariencia">
   <button onclick="cambioAparaiencia()" id="boton-apariencia" class="theme-toggle">
     Dark
   </button>
-</section>
-`;
+</section>*/
     return view;
 };
 
