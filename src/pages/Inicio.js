@@ -16,7 +16,7 @@ const Inicio = async () => {
 
                 <div class="inicio-boton">
                     <a href="#/character/?page=1">
-                        Bienvenido
+                        Entra y conoce los personajes de Rick and Mortys
                     </a>
                 </div>
                 

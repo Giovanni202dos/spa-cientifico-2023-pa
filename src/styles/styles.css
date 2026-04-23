@@ -164,25 +164,59 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-#section-cambio-page{
-  display: flex;
-  justify-content: center; 
-  /* background-color: aqua; */
-  margin: 8px;
-}
 
 #conteo-de-paginas{
   display: contents;
   
 }
 
-.retroceder-boton{
-  width: 86px;
-  margin-right: 3px;
+#section-cambio-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
 }
-.avanzar-boton{
-  width: 86px;
-  margin-left: 3px;
+
+/* INFO DE PAGINA */
+.page-info {
+  background: #1a1d24;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid #2a2f3a;
+}
+
+/* BOTONES */
+.page-btn {
+  background: #1a1d24;
+  color: white;
+  border: 1px solid #2a2f3a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* 🔥 circulares */
+  cursor: pointer;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.page-btn:hover {
+  background: #48cfad;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* deshabilitado (si lo implementás) */
+.page-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 #Main{
@@ -253,28 +287,33 @@ body {
   color: white;
 }
 
-.inicio-boton{
+.inicio-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: #060a06;
-  height: 30px;
-  width: 100px;
-  border-radius: 3%;
+  padding: 12px 20px; /* 🔥 clave */
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
 }
 
-.inicio-boton:hover{
-  background-color: #14c1d8;
-  height: 35px;
-  width: 105px;
-  border: #060a06 solid 2px;
-}
-.inicio-boton a{
+.inicio-boton a {
   text-decoration: none;
   color: #f3f3f3;
-  display: block;
-  height: 100%;
   text-align: center;
-
+  font-size: 14px;
+  line-height: 1.4;
 }
-.inicio-boton:hover a{
+
+/* hover PRO */
+.inicio-boton:hover {
+  background-color: #14c1d8;
+  transform: scale(1.05); /* 🔥 mejor que cambiar width/height */
+}
+
+.inicio-boton:hover a {
   color: #060a06;
 }
 
@@ -326,10 +365,42 @@ body {
   background-color: #3f4041;
   color: white;
 }
-#section-boton-apariencia{
+#section-boton-apariencia {
   display: flex;
-  flex-direction: row-reverse;
-  margin: 6px;
+  justify-content: flex-end;
+  margin: 10px 15px;
+}
+
+/* BOTÓN */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #1a1d24;
+  color: white;
+  border: 1px solid #2a2f3a;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+
+  transition: all 0.2s ease;
+}
+
+/* hover */
+.theme-toggle:hover {
+  background: #48cfad;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* estado activo (modo claro por ejemplo) */
+.theme-toggle.active {
+  background: #f3f3f3;
+  color: black;
+  border: none;
 }
 
 /* Estilo filtros */

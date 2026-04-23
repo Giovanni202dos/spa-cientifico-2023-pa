@@ -20,8 +20,10 @@ const Header = () => {
             </div>
         </div>
     <section id="section-boton-apariencia">
-    <button " onclick="cambioAparaiencia()" id="boton-apariencia"> black </button>
-    </section>
+  <button onclick="cambioAparaiencia()" id="boton-apariencia" class="theme-toggle">
+    Dark
+  </button>
+</section>
     `
     return view;
 };

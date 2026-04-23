@@ -16,13 +16,25 @@ const Home = async () => {
     console.log('pagess: ',characters?characters.info.pages:'no tiene paginas');
 
     const section =()=>{//para renderizar segun si hay algo q mostrar
-        let view = `
-        <section id="section-cambio-page">
-            <button " onclick="cambioPage(${characters? characters.info.pages:0},-1);" class="retroceder-boton"> <-- </button>
-            <p id="conteo-de-paginas">${obtenerNumeroDePagina(hash)}</p>
-            <button " onclick="cambioPage(${characters? characters.info.pages:0},1);" class="avanzar-boton"> --> </button>
-        </section>
-        `;
+let view = `
+<section id="section-cambio-page">
+
+  <button onclick="cambioPage(${characters ? characters.info.pages : 0}, -1)" 
+          class="page-btn prev">
+    ←
+  </button>
+
+  <div class="page-info">
+    Página ${obtenerNumeroDePagina(hash)}
+  </div>
+
+  <button onclick="cambioPage(${characters ? characters.info.pages : 0}, 1)" 
+          class="page-btn next">
+    →
+  </button>
+
+</section>
+`;
         return view;
     }
 
