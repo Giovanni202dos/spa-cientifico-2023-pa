@@ -82,44 +82,44 @@ const Home = async () => {
 
     `; */
 const view = `
-<nav class="filters">
-
-  <div class="filter-group">
-    <input type="text" id="textInput" placeholder="Buscar personaje...">
-    <button onclick="setValorDeUnParametroDelHash('name', textInput.value)">
-      Buscar
-    </button>
-  </div>
-
-  <div class="filter-group">
-    <span>Género</span>
-    <div class="filter-buttons">
-      <button onclick="setValorDeUnParametroDelHash('gender', 'male')" class="${activarColorBoton(hash,'gender','male')?'active':''}">Hombre</button>
-      <button onclick="setValorDeUnParametroDelHash('gender', 'female')" class="${activarColorBoton(hash,'gender','female')?'active':''}">Mujer</button>
-      <button onclick="setValorDeUnParametroDelHash('gender', 'unknown')" class="${activarColorBoton(hash,'gender','unknown')?'active':''}">?</button>
-    </div>
-  </div>
-
-  <div class="filter-group">
-    <span>Estado</span>
-    <div class="filter-buttons">
-      <button onclick="setValorDeUnParametroDelHash('status', 'Alive')" class="${activarColorBoton(hash,'status','Alive')?'active':''}">Vivo</button>
-      <button onclick="setValorDeUnParametroDelHash('status', 'Dead')" class="${activarColorBoton(hash,'status','Dead')?'active':''}">Muerto</button>
-      <button onclick="setValorDeUnParametroDelHash('status', 'unknown')" class="${activarColorBoton(hash,'status','unknown')?'active':''}">?</button>
-    </div>
-  </div>
-
-  <div class="filter-group">
-    <span>Especie</span>
-    <div class="filter-buttons">
-      <button onclick="setValorDeUnParametroDelHash('species', 'Human')" class="${activarColorBoton(hash,'species','Human')?'active':''}">Humano</button>
-      <button onclick="setValorDeUnParametroDelHash('species', 'Alien')" class="${activarColorBoton(hash,'species','Alien')?'active':''}">Alien</button>
-      <button onclick="setValorDeUnParametroDelHash('species', 'Robot')" class="${activarColorBoton(hash,'species','Robot')?'active':''}">Robot</button>
-      <button onclick="setValorDeUnParametroDelHash('species', 'unknown')" class="${activarColorBoton(hash,'species','unknown')?'active':''}">?</button>
-    </div>
-  </div>
-
-</nav>
+    <nav class="filters">
+    
+      <div class="filter-search">
+        <input type="text" id="textInput" placeholder="Buscar personaje...">
+        <button onclick="setValorDeUnParametroDelHash('name', textInput.value)">
+          Buscar
+        </button>
+      </div>
+    
+      <div class="filter-group">
+        <span>Género</span>
+        <div class="chips">
+          <button class="chip ${activarColorBoton(hash,'gender','male')?'active':''}" onclick="setValorDeUnParametroDelHash('gender','male')">Hombre</button>
+          <button class="chip ${activarColorBoton(hash,'gender','female')?'active':''}" onclick="setValorDeUnParametroDelHash('gender','female')">Mujer</button>
+          <button class="chip ${activarColorBoton(hash,'gender','unknown')?'active':''}" onclick="setValorDeUnParametroDelHash('gender','unknown')">?</button>
+        </div>
+      </div>
+    
+      <div class="filter-group">
+        <span>Estado</span>
+        <div class="chips">
+          <button class="chip ${activarColorBoton(hash,'status','Alive')?'active':''}" onclick="setValorDeUnParametroDelHash('status','Alive')">Vivo</button>
+          <button class="chip ${activarColorBoton(hash,'status','Dead')?'active':''}" onclick="setValorDeUnParametroDelHash('status','Dead')">Muerto</button>
+          <button class="chip ${activarColorBoton(hash,'status','unknown')?'active':''}" onclick="setValorDeUnParametroDelHash('status','unknown')">?</button>
+        </div>
+      </div>
+    
+      <div class="filter-group">
+        <span>Especie</span>
+        <div class="chips">
+          <button class="chip ${activarColorBoton(hash,'species','Human')?'active':''}" onclick="setValorDeUnParametroDelHash('species','Human')">Humano</button>
+          <button class="chip ${activarColorBoton(hash,'species','Alien')?'active':''}" onclick="setValorDeUnParametroDelHash('species','Alien')">Alien</button>
+          <button class="chip ${activarColorBoton(hash,'species','Robot')?'active':''}" onclick="setValorDeUnParametroDelHash('species','Robot')">Robot</button>
+          <button class="chip ${activarColorBoton(hash,'species','unknown')?'active':''}" onclick="setValorDeUnParametroDelHash('species','unknown')">?</button>
+        </div>
+      </div>
+    
+    </nav>
 
 ${characters && characters.info.pages>1?section():''}
 
