@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const query = req.url.replace("/api/rm", "")
   const url = `https://rickandmortyapi.com/api${query}`
 
