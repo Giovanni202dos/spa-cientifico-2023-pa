@@ -1,7 +1,7 @@
 module.exports = async (req, res) => {
   try {
     const url = new URL(req.url, `http://${req.headers.host}`)
-
+    console.log("apiiii Fetching:", url.pathname)
     const path = url.pathname.replace("/api/rm", "")
     const search = url.search
 
