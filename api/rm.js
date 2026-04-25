@@ -1,11 +1,11 @@
 module.exports = async (req, res) => {
   try {
-    const url = new URL(req.url, `http://${req.headers.host}`)
-    console.log("apiiii Fetching:", url.pathname)
-    const path = url.pathname.replace("/api/rm", "")
-    const search = url.search
+    const originalUrl = req.url
 
-    const finalUrl = `https://rickandmortyapi.com/api${path}${search}`
+    // quitar /api/rm del inicio
+    const endpoint = originalUrl.replace(/^\/api\/rm/, "")
+
+    const finalUrl = `https://rickandmortyapi.com/api${endpoint}`
 
     console.log("Fetching:", finalUrl)
 
