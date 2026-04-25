@@ -1,5 +1,9 @@
 
-const API = 'https://rickandmortyapi.com/api'
+/*const API = 'https://rickandmortyapi.com/api'*/
+/* si estoy ejecutando en local no uso el archivo api que cree para vercel(si no uso esa api como proxy me salta error en vercel) */
+const API = window.location.hostname === "localhost"
+  ? "https://rickandmortyapi.com/api"
+  : "/api/rm"
 
 const getData = async (hash) => {
     //const apiURL = id ? `${API}${id}` : API
