@@ -8,10 +8,11 @@ const API = window.location.hostname === "localhost"
 const getData = async (hash) => {
     //const apiURL = id ? `${API}${id}` : API
     const apiURL = API+hash;
-    console.log(apiURL);
+    console.log('api que voy a ejecutar: ',apiURL);
 
     try {
         const response = await fetch(apiURL)
+        console.log("ERROR RESPONSE1:", response)
         const data = await response.json()
         if(data.error){//por si no esncuentra el personaje
             console.log('es nulllllll');
